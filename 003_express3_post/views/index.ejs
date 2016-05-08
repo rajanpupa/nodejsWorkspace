@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My App</title>
+</head>
+<body>
+	<h1><%= title %></h1>
+	<ul>
+		<% for (var i=0; i < items.length; i++){ %>
+			<li><%= items[i].desc %> </li>
+		<% } %>
+	</ul>
+	<form action="/add" method="post">
+		<input type="text" name="newItem">
+		<input type="submit" >
+	</form>
+</body>
+</html>

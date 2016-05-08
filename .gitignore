@@ -1,0 +1,7 @@
+# ignore packages installed by npm
+node_modules
+bower_components
+.metadata
+*~
+.DS_Store
+credentials.js

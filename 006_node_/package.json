@@ -1,0 +1,11 @@
+{
+  "name": "006_app",
+  "version": "1.0.0",
+  "description": "folder structure, node app by vogella",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
