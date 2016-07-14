@@ -1,0 +1,13 @@
+{
+  "name": "007_restful_app",
+  "main": "app.js",
+    
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "latest",
+    "node-restful" : "latest",
+    "body-parser" : "latest",
+    "method-override":"latest",
+    "errorhandler": "*"
+  }
+}
