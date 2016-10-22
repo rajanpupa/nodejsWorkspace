@@ -25,4 +25,11 @@ npm start
 * this will restart the application if any file is changed. great for development phase
 ```nodemon app```
 
+#### Handling url parameters
+
+* file app01.js is an example of handeling the url parameters
+* `node app01`
+* then type this in your browser `http://localhost:8080/?data=put_some_text_here`
+
+## References
 https://youtu.be/QseHOX-5nJQ
