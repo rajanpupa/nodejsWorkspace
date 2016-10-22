@@ -1,0 +1,12 @@
+{
+  "name": "007_restful_app",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "latest",
+    "errorhandler": "*",
+    "express": "latest",
+    "method-override": "latest",
+    "mysql": "^2.11.1",
+    "node-restful": "latest"
+  }
+}

@@ -1,0 +1,5 @@
+applications:
+-   name: node_mysql
+    host: mysql
+    command: node app.js
+    memory: 128M
