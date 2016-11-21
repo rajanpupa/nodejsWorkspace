@@ -1,5 +1,5 @@
 {
-  "name": "000_app",
+  "name": "030_node_fb",
   "version": "1.0.0",
   "description": "simplest node app",
   "main": "app.js",
@@ -9,6 +9,6 @@
   "author": "Rajan",
   "license": "ISC",
   "dependencies": {
-    "zlib": "^1.0.5"
+    "fb": "^1.1.1"
   }
 }

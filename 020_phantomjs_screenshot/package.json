@@ -1,14 +1,15 @@
 {
-  "name": "000_app",
+  "name": "020_phantomjs_screenshot",
   "version": "1.0.0",
-  "description": "simplest node app",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Rajan",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "zlib": "^1.0.5"
+    "nodepdf": "^1.3.0",
+    "phantomjs": "^2.1.7"
   }
 }
