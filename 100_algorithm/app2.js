@@ -1,5 +1,4 @@
 function processData(input) {
-    //Enter your code here
     var lines = input.split('\n');
 
     for(var j =1; j<lines.length; j++){
