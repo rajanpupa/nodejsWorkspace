@@ -38,7 +38,7 @@ app.set('view engine', 'handlebars');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
@@ -64,6 +64,7 @@ passport.deserializeUser(function(obj, done){
 
 app.use(bodyParser.json());
 app.use(methodOverride('X-HTTP-Method-Override'));
+app.use(cookieParser());
 app.use(session({secret:'supernova', saveUninitialized: true, resave: true}));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -85,25 +86,20 @@ app.use(function(req, res, next){
 });
 
 // add the strategies
+var users = [{"id":111, "username":"rajan", "password":"rajan"}];
+
 passport.use('local-signin', new LocalStrategy(
   {passReqToCallback : true}, //allows us to pass back the request to the callback
   function(req, username, password, done) {
-    funct.localAuth(username, password)
-    .then(function (user) {
-      if (user) {
-        console.log("LOGGED IN AS: " + user.username);
-        req.session.success = 'You are successfully logged in ' + user.username + '!';
-        done(null, user);
-      }
-      if (!user) {
-        console.log("COULD NOT LOG IN");
-        req.session.error = 'Could not log user in. Please try again.'; //inform user could not log them in
-        done(null, user);
-      }
-    })
-    .fail(function (err){
-      console.log(err.body);
-    });
+    if(username === users[0].username && password === users[0].password){
+      console.log("LOGGED IN AS: " + users[0].username);
+      req.session.success = 'You are successfully logged in ' + users[0].username + '!';
+      return done(null, users[0]);
+    }else{
+      console.log("COULD NOT LOG IN");
+      req.session.error = 'Could not log user in. Please try again.'; 
+      return done(null, false, {"message": "user not found."});
+    }
   }
 ));
 // Use the LocalStrategy within Passport to register/"signup" users.
